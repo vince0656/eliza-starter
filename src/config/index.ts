@@ -99,5 +99,10 @@ export function getTokenForProvider(
       );
     case ModelProviderName.GROQ:
       return character.settings?.secrets?.GROQ_API_KEY || settings.GROQ_API_KEY;
+    case ModelProviderName.HYPERBOLIC:
+      return (
+        character.settings?.secrets?.HYPERBOLIC_API_KEY ||
+        settings.HYPERBOLIC_API_KEY
+      );
   }
 }
